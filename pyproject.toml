@@ -6,6 +6,10 @@ authors = ["David Hecker <heckerdw@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+flake8 = "^4.0.1"
+black = "^21.12b0"
+pytest-watch = "^4.2.0"
+nltk = "^3.6.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
