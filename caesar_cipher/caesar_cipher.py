@@ -22,4 +22,16 @@ def decrypt(encrypted_text, key):
     return encrypt(encrypted_text, -key)
 
 def crack(encrypted_text):
-    pass
+
+    for i in range(26):
+        total = 0
+        test_text = encrypt(encrypted_text, i)
+        text_as_a_list = test_text.split()
+        for text in text_as_a_list:
+            if text in name_list or text.lower() in word_list:
+                total += 1
+        
+        if (total / len(text_as_a_list)) > .5:
+            return ' '.join(text_as_a_list)
+
+    return ''
